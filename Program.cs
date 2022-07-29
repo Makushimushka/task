@@ -41,7 +41,7 @@ while (flag == true)
     Console.WriteLine("Для выхода введите quit\nВведите 1 для использования тестового массива,\nлибо введите" + 
     "элементы собственного массива через запятую и пробел: ");
     string[] userArray;
-    string userinput = Console.ReadLine();
+    string userinput = Console.ReadLine()!;
     if (userinput == "1") 
     {
         userArray = new string[] {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science"};
