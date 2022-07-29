@@ -27,3 +27,33 @@ string[] LengthFilterV1(string[] inputArray, int maxlen)
     }
     return outputArray;
 }
+
+
+
+
+bool flag = true;
+while (flag == true)
+
+{
+    Console.WriteLine();
+    Console.WriteLine("Для выхода введите quit\nВведите 1 для использования тестового массива,\nлибо введите" + 
+    "элементы собственного массива через запятую и пробел: ");
+    string[] userArray;
+    string userinput = Console.ReadLine();
+    if (userinput == "1") 
+    {
+        userArray = new string[] {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science"};
+        Console.Write("Тестовый: ");
+        PrintArray(userArray);
+        Console.Write("Итогововый ");
+        PrintArray(LengthFilterV1(userArray, 3));
+    }
+    else if (userinput == "quit") flag = false;
+    else 
+    {
+        userArray = userinput.Trim().Split(", ");
+        Console.Write("Итогововый ");
+        PrintArray(LengthFilterV1(userArray, 3));
+    } 
+    Console.WriteLine();
+}
