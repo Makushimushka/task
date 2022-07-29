@@ -14,7 +14,9 @@ void PrintArray(string[] coll)
 
 string[] LengthFilterV1(string[] inputArray, int maxlen)
 {
-
+    // Принимает в аргументе массив строковых элементов и
+    // int maxlen ограничение по длинне элементов (включая значение)
+    // возвращает новый массив с элементами соответствующими условию
     int lenoutput = 0;
     for (int i = 0; i < inputArray.Length; i++) {if (inputArray[i].Length <= maxlen)lenoutput++;}
     
